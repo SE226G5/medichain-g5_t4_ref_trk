@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     %% Component Definitions & Styling
     subgraph Frontend [User Interface Layer]
@@ -37,3 +38,4 @@ graph TD
     style Logic fill:#27ae60,stroke:#333,stroke-width:2px,color:#fff
     style Workflow fill:#f1c40f,stroke:#333,stroke-width:2px,color:#000
     style DB fill:#7f8c8d,stroke:#333,stroke-width:2px,color:#fff
+```
