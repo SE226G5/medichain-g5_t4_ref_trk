@@ -1,0 +1,55 @@
+classDiagram
+    class Doctor {
+        +int doctorId
+        +String name
+        +String email
+        +String phone
+        +viewPatientStatus(patientId: int)
+        +viewSampleStatus(sampleId: int)
+        +viewTestResult(sampleId: int) TestResult
+    }
+
+    class Patient {
+        +int patientId
+        +String name
+        +Date dob
+        +String gender
+        +int doctorId
+    }
+
+    class Sample {
+        +int sampleId
+        +int patientId
+        +int doctorId
+        +String status
+        +Date receivedDate
+        +updateStatus(newStatus: String)
+        +isAccessibleBy(doctorId: int) boolean
+    }
+
+    class TestResult {
+        +int resultId
+        +int sampleId
+        +String resultDetails
+        +boolean isApproved
+        +Date approvedAt
+        +approveResult()
+        +sendSecureNotification()
+    }
+
+    class AuditLog {
+        +int logId
+        +int doctorId
+        +int attemptedSampleId
+        +String actionDetails
+        +String ipAddress
+        +DateTime timestamp
+        +logUnauthorizedAccess(doctorId: int, sampleId: int, ip: String)
+    }
+
+    %% العلاقات بين الفئات
+    Doctor "1" --> "0..*" Patient : Manages
+    Patient "1" --> "0..*" Sample : Has
+    Doctor "1" --> "0..*" Sample : Orders/Tracks
+    Sample "1" -- "1" TestResult : Contains
+    Doctor "1" ..> AuditLog : Monitored By

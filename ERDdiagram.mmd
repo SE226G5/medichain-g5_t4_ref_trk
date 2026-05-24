@@ -1,0 +1,43 @@
+erDiagram
+    DOCTOR {
+        int doctor_id PK
+        string name
+        string email
+        string phone
+    }
+    PATIENT {
+        int patient_id PK
+        string name
+        date dob
+        string gender
+        int doctor_id FK
+    }
+    SAMPLE {
+        int sample_id PK
+        int patient_id FK
+        int doctor_id FK
+        string status
+        date received_date
+    }
+    TEST_RESULT {
+        int result_id PK
+        int sample_id FK
+        string result_details
+        boolean is_approved
+        date approved_at
+    }
+    AUDIT_LOG {
+        int log_id PK
+        int doctor_id FK
+        int attempted_sample_id
+        string action_details
+        string ip_address
+        timestamp timestamp
+    }
+
+    %% تحديد العلاقات بين الكيانات
+    DOCTOR ||--o{ PATIENT : "Manages"
+    PATIENT ||--o{ SAMPLE : "Has"
+    DOCTOR ||--o{ SAMPLE : "Orders"
+    SAMPLE ||--|| TEST_RESULT : "Generates"
+    DOCTOR ||--o{ AUDIT_LOG : "Triggers"
