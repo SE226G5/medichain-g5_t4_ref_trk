@@ -14,11 +14,11 @@ Provide a brief description of what this module does based on the project text. 
 
 | Member Name | Primary Responsibility | Assigned Tasks (Examples) | GitHub Profile |
 | :--- | :--- | :--- | :--- |
-| **Student 1 (Leader)** | Integration & Architecture | Component Diagrams, API Specs, Team Coordination | [Link] |
-| **Student 2** | Requirements & Analysis | Functional Requirements, Use Case Diagrams | [Link] |
-| **Student 3** | Process Modeling | Activity Diagrams, Business Rules Validation | [Link] |
-| **Student 4** | Data Design | ERD, Database Schema, Class Diagrams | [Link] |
-| **Student 5 (Optional)** | Interaction Design | Sequence Diagrams, Logic Flow | [Link] |
+| **Student 1 (Leader)** | Integration & Architecture | Component Diagrams, API Specs, Team Coordination | [https://github.com/wiaamkasouha] |
+| **Student 2** | Requirements & Analysis | Functional Requirements, Use Case Diagrams | [https://github.com/Alaaalothma] |
+| **Student 3** | Process Modeling | Activity Diagrams, Business Rules Validation | [https://github.com/mautozbir-oss123] |
+| **Student 4** | Data Design | ERD, Database Schema, Class Diagrams | [https://github.com/maiaasi] |
+| **Student 5 (Optional)** | Interaction Design | Sequence Diagrams, Logic Flow | [https://github.com/alsmaeelmay-pixel] |
 | **Student 6 (Optional)** | UI/UX & Frontend | Wireframes, Interface Logic, User Stories | [Link] |
 
 ---
